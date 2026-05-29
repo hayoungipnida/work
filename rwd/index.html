@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+
+    <div class="mainpage">
+
+    <header class="site-header">
+    <div class="header-mobile">
+    <a href="#"><img src="img/logo_m.png" class="logo" alt="logo"></a>
+    <div class="header-icons">
+      <a href="#"><img src="img/searchicon_m.png" alt="search"></a>
+      <a href="#"><span>로그인</span></a>
+      <a href="#"><img src="img/hamicon_m.png" alt="hammenu"></a>
+    </div>
+  </div>
+
+  <div class="header-pc pc-only">
+    <div class="header-pc-inner">
+    <a href="#" class="pc-logo"><img src="img/logo_d.png" alt="logo"></a>
+
+    <nav class="pc-nav">
+      <div class="pc-nav-item" data-menu="booking">예약</div>
+      <div class="pc-nav-item" data-menu="travel">여행준비</div>
+      <div class="pc-nav-item" data-menu="club">아시아나 클럽</div>
+    </nav>
+
+    <div class="pc-nav-right">
+      <a href="#">로그인</a>
+      <a href="#">회원가입</a>
+      <a href="#" class="pc-lang"><img src="img/globalicon_d.png" alt="globalicon"></a>
+    </div>
+  </div>
+  </div>
+
+  <div class="pc-dropdown" id="pc-dropdown">
+    <div class="dd-inner">
+    <div class="dd-panel pc-only" id="dd-booking">
+      <div class="dd-grid">
+        <div class="dd-col">
+          <p class="dd-title">예약 및 관리</p>
+          <a href="#" class="dd-link">항공권 예약</a>
+          <a href="#" class="dd-link">예약 조회</a>
+          <a href="#" class="dd-link">온라인 체크인</a>
+          <a href="#" class="dd-link">운항정보</a>
+          <a href="#" class="dd-link">매직보딩패스</a> 
+          <a href="#" class="dd-link">Asiana Corporate Plus</a>
+          <a href="#" class="dd-link">취향지 정보</a>
+        </div>
+        <div class="dd-col">
+          <p class="dd-title">부가서비스 구매</p>
+          <a href="#" class="dd-link">사전 좌석 구매</a>
+          <a href="#" class="dd-link">듀오 좌석 구매</a>
+          <a href="#" class="dd-link">업그레이드 스탠바이</a>
+          <a href="#" class="dd-link">반려동물 신청</a>
+          <a href="#" class="dd-link">사전 수하물 구매</a>
+        </div>
+        <div class="dd-col">
+          <p class="dd-title">예약 가이드</p>
+          <a href="#" class="dd-link">예약 안내</a>
+          <a href="#" class="dd-link">운임 안내</a>
+          <a href="#" class="dd-link">최저가 간편조회</a>
+          <a href="#" class="dd-link">신용카드 혜택</a>
+          <a href="#" class="dd-link">철도 연계 예약</a>
+        </div>
+    </div>
+    </div>
+
+    <div class="dd-panel pc-only" id="dd-travel" style="display:none">
+      <div class="dd-grid dd-4">
+        <div class="dd-col ">
+          <p class="dd-title">기내 경험</p>
+          <a href="#" class="dd-link">기내서비스 순서</a>
+          <a href="#" class="dd-link">특별 기내식</a>
+          <a href="#" class="dd-link">기내 엔터테인먼트</a>
+          <a href="#" class="dd-link">기내 와이파이</a>
+          <a href="#" class="dd-link">기내 면세점</a>
+          <a href="#" class="dd-link">기내 유시물 조회</a>
+          <a href="#" class="dd-link">항공기 안내</a>
+        </div>
+        <div class="dd-col">
+          <p class="dd-title">공항 이용</p>
+          <a href="#" class="dd-link">탑승 수속 안내</a>
+          <a href="#" class="dd-link">취항지 공항 정보</a>
+          <a href="#" class="dd-link">라운지이용</a>
+          <a href="#" class="dd-link">인천공항 환승 프로그램</a>
+          <a href="#" class="dd-link">코드룸 서비스</a>
+          <a href="#" class="dd-link">출입국 규정</a>
+        </div>
+        <div class="dd-col">
+          <p class="dd-title">수하물</p>
+          <a href="#" class="dd-link">이용안내</a>
+          <a href="#" class="dd-link">휴대수하물</a>
+          <a href="#" class="dd-link">위탁수하물</a>
+          <a href="#" class="dd-link">특수 수하물</a>
+          <a href="#" class="dd-link">수하물 지연/파손</a>
+        </div>
+        <div class="dd-col">
+          <p class="dd-title">도움이 필요한 고객</p>
+          <a href="#" class="dd-link">유아 동반 고객</a>
+          <a href="#" class="dd-link">고령자 고객</a>
+          <a href="#" class="dd-link">혼자 여행하는 어린이/청소년</a>
+          <a href="#" class="dd-link">임산부 고객</a>
+          <a href="#" class="dd-link">몸이 불편한 고객</a>
+          <a href="#" class="dd-link">반려동물 동반 고객</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="dd-panel pc-only" id="dd-club" style="display:none">
+      <div class="dd-grid">
+        <div class="dd-col">
+          <p class="dd-title">회원제도</p>
+          <a href="#" class="dd-link">회원 안내</a>
+          <a href="#" class="dd-link">특별 프로그램</a>
+          <a href="#" class="dd-link">할인제휴사</a>
+          <a href="#" class="dd-link">내 마일리지 찾기</a>
+        </div>
+        <div class="dd-col">
+          <p class="dd-title">마일리지적립</p>
+          <a href="#" class="dd-link">아시아나항공</a>
+          <a href="#" class="dd-link">스타얼라이언스/제휴항공사</a>
+          <a href="#" class="dd-link">마일리지 적립 제휴사</a>
+          <a href="#" class="dd-link">누락 마일리지 적립</a>
+        </div>
+        <div class="dd-col">
+          <p class="dd-title">마일리지사용</p>
+          <a href="#" class="dd-link">아시아나항공</a>
+          <a href="#" class="dd-link">스타얼라이언스/제휴항공사</a>
+          <a href="#" class="dd-link">마일리지사용몰</a>
+          <a href="#" class="dd-link">캐시 앤 마일즈</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+  </div>
+  <div class="dd-overlay" id="dd-overlay"></div>
+  
+</header>
+
+    <form name="mainpage" action="result.php" method="post" onsubmit="return totalCheck()" >
+    <fieldset>
+    <legend>아시아나 반응형 웹 페이지</legend>
+
+    <div class="ticketbooking-container">
+        <nav class="booking-tabs mobile">
+            <button class="tab active">예매</button>
+            <button class="tab">마일리지 예매</button>
+        </nav>
+
+        <nav class="notice pc">
+            <a href="#"><img src="img/danger_m.png" alt="dangericon">기상 영향 항공편 운항 안내 (제주, 광주, 여수)</a>
+        </nav>
+        
+        <div class="select-box mobile">
+            <div class="select-button mobile">
+                <button class="type-active">왕복</button>
+                <button class="type">편도</button>
+            </div>
+        
+        <div class="destination-picker mobile">
+            <div class="location-box">
+            <span class="airport-code">ICN</span>
+            <span class="city-name">서울</span>
+            </div>
+
+        <button type="button" class="swap-button">
+            <img src="img/switchicon_m.png" alt="출발지 도착지 전환">
+        </button>
+
+        <div class="destination-box">
+            <span class="airport-code-de">도착지</span>
+            <span class="city-name-des">선택해주세요</span>
+        </div>
+        </div>
+        <button type="submit" class="search-button mobile">항공권 검색</button>
+        </div>
+
+        <div class="select-box pc">
+        <div class="select-top pc">
+         <div class="select-button-d pc">
+                <button class="type-active">왕복</button>
+                <button class="type">편도</button>
+            </div>
+
+            <div class="toggle-container pc">
+            <span class="label-text">마일리지로 예매</span>
+            <label class="toggle-switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+            </label>
+            </div>
+        </div>
+
+        <div class="destination-picker pc">
+            <div class="location-box pc">
+            <div class="airport-code">ICN</div>
+            <div class="city-name">서울</div>
+            </div>
+
+        <button type="button" class="swap-button pc">
+            <img src="img/switchicon_d.png" alt="출발지 도착지 전환">
+        </button>
+
+        <div class="destination-box pc">
+        <div class="f-to">
+        <label>도착지</label>
+        <div class="dest-error-pop" id="destErrorPop">도착지를 먼저 선택해주세요.</div>
+        <button class="dest-btn" id="destBtn" type="button" aria-haspopup="true" aria-expanded="false">
+        <div class="airport-code-des">어디로 갈까요?</div>
+        </button>
+
+
+    <div class="mini-drop" id="miniDrop">
+        <div class="mini-search">
+            <img src="img/searchicon_d.png" alt="search" class="mini-search-icon">
+            <input type="text" id="miniInput" placeholder="도시, 공항 검색" autocomplete="off">
+        </div>
+        <div class="mini-results" id="miniResults"></div>
+        <button class="all-regions-btn" id="allBtn" type="button">
+            <span>모든 지역 보기</span>
+            <span class="arrow-icon">›</span>
+        </button>
+    </div>
+</div>
+
+
+<div class="dest-overlay" id="destOverlay">
+    <div class="dest-modal" id="destModal">
+        <div class="dest-modal-top">
+            <span class="dest-modal-title">도착지 선택</span>
+            <button class="dest-close-btn" id="destCloseBtn" type="button" aria-label="닫기">✕</button>
+        </div>
+        <div class="dest-modal-search">
+            <img src="img/searchicon_d.png" alt="search" class="modal-search-icon">
+            <input type="text" id="modalInput" placeholder="도시 또는 공항 검색" autocomplete="off">
+        </div>
+        <div class="dest-region-tabs" id="destRegionTabs">
+            <button type="button" class="dest-rtab active" data-r="all">전체</button>
+            <button type="button" class="dest-rtab" data-r="domestic">국내선</button>
+            <button type="button" class="dest-rtab" data-r="northeast asia">동북아시아</button>
+            <button type="button" class="dest-rtab" data-r="central asia">중앙아시아</button>
+            <button type="button" class="dest-rtab" data-r="southeast asia">동남아시아</button>
+            <button type="button" class="dest-rtab" data-r="europe">유럽</button>
+            <button type="button" class="dest-rtab" data-r="oceania">대양주</button>
+            <button type="button" class="dest-rtab" data-r="america">미주</button>
+        </div>
+        <div class="dest-city-grid" id="destCityGrid"></div>
+        <div class="dest-modal-footer">
+            <button class="dest-confirm-btn" id="destConfirmBtn" type="button">선택 완료</button>
+        </div>
+    </div>
+</div>
+        </div>
+
+        <div class="departdategroup">
+        <div class="departdate pc">언제 떠날까요?</div>
+        <div class="calendar-drop" id="calendarDrop"></div>
+        </div>
+
+        <div class="pax-wrapper">
+        <div class="number pc">탑승객 1</div>
+        <div class="passenger-drop" id="passengerDrop"></div>
+        </div>
+
+        
+        <div class="seat pc">모든 좌석</div>
+        <button type="submit" class="search-button pc"><img src="img/searchicon_d.png" alt="search"></button>
+        </div>
+        </div>
+        
+        
+
+    </div>
+</fieldset>
+</form>
+
+    <div class="promotion">
+        <div class="promotion-title">
+        <h3>프로모션</h3>
+        <a href="#" class="btn-more">
+            <span class="m-only">더보기</span>
+            <img src="img/righticon_d.png" alt="more" class="pc-only">
+        </a>
+
+        <div class="controls-group pc-only">
+        <div class="banner-indi">
+            <div class="active"></div>
+            <div></div>
+        </div>
+
+        <div class="slider-controls">
+            <button class="btn-prev" type="button">&#60;</button>
+            <button class="btn-next" type="button">&#62;</button>
+        </div>
+    </div>
+    </div>
+
+    
+
+        <ul class="promo-banner">
+  
+            <li><a href="#">
+                <picture>
+                    <source srcset="img/banner1_d.png" media="(min-width: 1920px)">
+                    <img src="img/banner1_m.png" alt="promobanner">
+                </picture>
+                <span>홈페이지 예약이 처음이라면 누구나!<br>온라인 첫구매 쿠폰</span></a>
+            </li>
+            <li><a href="#">
+                <picture>
+                    <source srcset="img/banner2_d.png" media="(min-width: 1920px)">
+                    <img src="img/banner2_m.png" alt="promobanner">
+                </picture>
+                <span>인천 - 부다페스트<br>신규 취항 임박 특가</span></a></li>
+            <li><a href="#">
+                <picture>
+                    <source srcset="img/banner3_d.png" media="(min-width: 1920px)">
+                    <img src="img/banner3_m.png" alt="promobanner">
+                </picture>
+                <span>국내선 제주노선<br>유료좌석 할인</span></a></li>
+            <li><a href="#">
+                <picture>
+                    <source srcset="img/banner4_d.png" media="(min-width: 1920px)">
+                    <img src="img/banner4_m.png" alt="promobanner">
+                </picture>
+                <span>중국 5개 도시<br>특가 프로모션</span></a></li>
+
+                <li class="banner-only pc"><a href="#">
+                <picture>
+                    <source srcset="img/banner4_d.png" media="(min-width: 1920px)">
+                    <img src="img/banner4_m.png" alt="promobanner">
+                </picture>
+                <span>중국 5개 도시<br>특가 프로모션</span></a></li>
+                <li class="banner-only pc"><a href="#">
+                <picture>
+                    <source srcset="img/banner4_d.png" media="(min-width: 1920px)">
+                    <img src="img/banner4_m.png" alt="promobanner">
+                </picture>
+                <span>중국 5개 도시<br>특가 프로모션</span></a></li>
+                <li class="banner-only pc"><a href="#">
+                <picture>
+                    <source srcset="img/banner4_d.png" media="(min-width: 1920px)">
+                    <img src="img/banner4_m.png" alt="promobanner">
+                </picture>
+                <span>중국 5개 도시<br>특가 프로모션</span></a></li>
+                <li class="banner-only pc"><a href="#">
+                <picture>
+                    <source srcset="img/banner4_d.png" media="(min-width: 1920px)">
+                    <img src="img/banner4_m.png" alt="promobanner">
+                </picture>
+                <span>중국 5개 도시<br>특가 프로모션</span></a></li>
+                
+        </ul>
+
+        
+
+    </div>
+
+<section class="notice-ad-section">
+    <div class="container">
+        <div class="notice-area">
+            <div class="section-title">
+                <h3>공지사항</h3>
+                <a href="#" class="more-btn">
+                    <span class="m-only">더보기</span>
+                    <img src="img/righticon_d.png" alt="더보기" class="pc-only">
+                </a>
+            </div>
+            <ul class="notice-list">
+    <li><a href="#"><span>국내선 유류할증료(2026년 5월)</span><span class="date">2026년 04월 06일</span></a></li>
+    <li><a href="#"><span>인천-후쿠오카 5월 증편 운항 안내</span><span class="date">2026년 04월 03일</span></a></li>
+    <li><a href="#"><span>싱가포르 입국 규정 강화 안내</span><span class="date">2026년 03월 26일</span></a></li>
+    <li class="pc-only"><a href="#"><span>최신 운항 스케줄 안내</span><span class="date">2026년 03월 06일</span></a></li>
+</ul>
+        </div>
+
+
+        <div class="banner-container">
+            <a href="#">
+                <picture class="bg">
+                    <source srcset="img/adback_d.png" media="(min-width: 1920px)">
+                    <source srcset="img/adback_t.png" media="(min-width: 768px)">
+                    <img src="img/adback_m.png" alt="background" class="bg-image">
+                </picture>
+                <div class="hand-wrapper">
+                    <picture class="hand">
+                        <source srcset="img/adhand_d.png" media="(min-width: 1920px)">
+                        <source srcset="img/adhand_t.png" media="(min-width: 768px)">
+                        <img src="img/adhand_m.png" alt="hand" class="hand-image">
+                    </picture>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<div class="service-background">
+    <div class="group">
+
+    <div class="service-container">
+    <h3 class="service-title">여행을 더 편리하게</h3>
+    <ul class="service-list">
+        <li class="service-item">
+        <a href="#">
+            <img src="img/icon1_m.png" alt="" class="service-icon">
+            <span class="service-name">기내 면세점</span>
+        </a>
+        </li>
+        <li class="service-item">
+        <a href="#">
+            <img src="img/icon2_m.png" alt="" class="service-icon">
+            <span class="service-name">여행자 보험</span>
+        </a>
+        </li>
+        <li class="service-item">
+        <a href="#">
+            <img src="img/icon3_m.png" alt="" class="service-icon">
+            <span class="service-name">투어 · 액티비티</span>
+        </a>
+        </li>
+        <li class="service-item">
+        <a href="#">
+            <img src="img/icon4_m.png" alt="" class="service-icon">
+            <span class="service-name">매직보딩패스</span>
+        </a>
+        </li>
+    </ul>
+    </div>
+
+
+    <div class="chatbot-banner pc-only">
+    <a href="#">
+    <div class="banner-inner">
+    <h4>궁금한 점이 있으신가요?</h4>
+    
+    <div class="chat-row">
+        <img src="img/icon_chatbot.png" alt="챗봇 아론" class="chatbot-character">
+        <div class="chat-bubbles">
+            <p class="bubble bubble-1">안녕하세요. 아시아나항공의 챗봇 '아론'입니다.</p>
+            <p class="bubble bubble-2">궁금한 점이 있으시면 저에게 물어봐주세요!</p>
+        </div>
+    </div>
+
+    <div class="bubble bubble-3 bubble-typing">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <p class="guide-text">화면 우측 하단 버튼을 눌러 해소해보세요</p>
+</div>
+    </a>
+    </div>
+
+    </div>
+</div>
+
+<button class="chatbot-float-btn" type="button" onclick="toggleChatbot()">
+    <img src="img/icon_chatbot.png" alt="챗봇">
+</button>
+
+<footer class="main-footer">
+
+    <nav class="footer-accordion">
+        <details class="accordion-item">
+            <summary class="accordion-header">
+                아시아나
+                <span><img src="img/downicon_m.png" alt="downicon"></span>
+            </summary>
+            <ul class="accordion-content">
+                <li><a href="#">아시아나항공 소개</a></li>
+                <li><a href="#">ESG 경영</a></li>
+                <li><a href="#">홍보채널</a></li>
+                <li><a href="#">인재채용</a></li>
+                <li><a href="#">제휴 항공사</a></li>
+                <li><a href="#">사회공헌</a></li>
+                <li><a href="#">IR</a></li>
+            </ul>
+        </details>
+        <details class="accordion-item">
+            <summary class="accordion-header">
+                약관 및 규정
+                <span><img src="img/downicon_m.png" alt="downicon"></span>
+            </summary>
+            <ul class="accordion-content">
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">운송 약관 및 고지사항</a></li>
+                <li><a href="#">SNS 운영정책</a></li>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">아시아나클럽 규정</a></li>
+            </ul>
+        </details>
+        <details class="accordion-item">
+            <summary class="accordion-header">
+                기타안내
+                <span><img src="img/downicon_m.png" alt="downicon"></span>
+            </summary>
+            <ul class="accordion-content">
+                <li><a href="#">사이트 맵</a></li>
+                <li><a href="#">소비자 안전정보 안내</a></li>
+                <li><a href="#">유료 부가서비스</a></li>
+                <li><a href="#">항공교통이용자 서비스계획</a></li>
+                <li><a href="#">항공교통이용자 피해 규제</a></li>
+            </ul>
+        </details>
+        <details class="accordion-item">
+            <summary class="accordion-header">
+                고객지원
+                <span><img src="img/downicon_m.png" alt="downicon"></span>
+            </summary>
+            <ul class="accordion-content">
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">자주 찾는 질문</a></li>
+                <li><a href="#">고객의 말씀</a></li>
+                <li><a href="#">e-서식함</a></li>
+            </ul>
+        </details>
+    </nav>
+
+    <div class="footer-contact">
+        <div class="contact-title">
+            <h3>예약센터</h3>
+            <span class="globalcenter">국가별 안내</span>
+        </div>
+        <div class="globalnumber">1588-1800</div>
+        <div class="frominter">(해외에서 연결시) 82-2-2669-8000</div>
+        <p><strong>국내선</strong> &nbsp;&nbsp;|&nbsp; 07:00 ~ 19:00</p>
+        <p><strong>국제선</strong> &nbsp;&nbsp;|&nbsp; 07:00 ~ 22:00</p>
+    </div>
+
+    <div class="footer-company">
+        <details open>
+            <summary>
+                <img class="logo" src="img/logo_m.png" alt="logo">
+                <span><img src="img/downicon_m.png" alt="downicon"></span>
+            </summary>
+            <address>
+                <span class="bar">아시아나(주)</span>
+                <span class="bar">사업자등록번호:104-81-17480</span>
+                <span class="bar">통신판매업 신고: 강서 제 16-2822</span>
+                <span class="bar-break pc-only"></span>
+                <span class="bar">서버 위치: 서울 강서구 오쇠동 아시아나IDT(주) 전산센터</span>
+                <span class="bar">개인정보보호책임자: 윤찬의 상무</span>
+            </address>
+        </details>
+        <div class="social-links">
+            <ul>
+                <li><a href="#"><img src="img/youtube_m.png" alt="sns"></a></li>
+                <li><a href="#"><img src="img/insta_m.png" alt="sns"></a></li>
+                <li><a href="#"><img src="img/facebook_m.png" alt="sns"></a></li>
+                <li><a href="#"><img src="img/x_m.png" alt="sns"></a></li>
+            </ul>
+        </div>
+        <p><small>© ASIANA AIRLINES. All rights reserved.</small></p>
+    </div>
+
+</footer>
+
+</div>
+</body>
+</html>
